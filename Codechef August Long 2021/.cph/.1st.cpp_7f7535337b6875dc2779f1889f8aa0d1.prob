@@ -1,0 +1,1 @@
+{"name":"Local: 1st","url":"c:\\Workspace\\Competitive Programming\\Codechef August Long 2021\\1st.cpp","tests":[{"id":1628244150636,"input":"3\n10 20 30 0 29 30\n0 0 0 0 0 1\n1 1 1 0 0 0","output":"1\n2\n1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Workspace\\Competitive Programming\\Codechef August Long 2021\\1st.cpp","group":"local","local":true}
