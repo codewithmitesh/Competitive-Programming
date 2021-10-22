@@ -1,0 +1,2 @@
+
+    bonus= max(bonus,streak);

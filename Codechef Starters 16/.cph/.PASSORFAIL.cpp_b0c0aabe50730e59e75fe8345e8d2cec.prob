@@ -1,0 +1,1 @@
+{"name":"Local: PASSORFAIL","url":"c:\\Workspace\\Competitive Programming\\Codechef Starters 16\\PASSORFAIL.cpp","tests":[{"id":1634740427274,"input":"3\n5 2 3\n5 2 4\n4 0 0","output":"PASS\nFAIL\nFAIL"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Workspace\\Competitive Programming\\Codechef Starters 16\\PASSORFAIL.cpp","group":"local","local":true}
