@@ -140,7 +140,7 @@ void solve()
     cin >> N;
     string str;
     cin >> str;
-    for (int i = 0; i < (N-1); i++)
+    for (int i = 0; i < (N - 1); i++)
     {
         if (str[i] == 'L' && str[i + 1] == 'L')
         {

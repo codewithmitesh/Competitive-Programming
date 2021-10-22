@@ -136,22 +136,22 @@ void solve()
 { //Snippets Variables
     int i, j, n, m;
     //Code Variables
-int N,X,P,Posi_marks,Nage_marks,Total_marks;
-cin>>N>>X>>P;
+    int N, X, P, Posi_marks, Nage_marks, Total_marks;
+    cin >> N >> X >> P;
 
-Posi_marks = 3*X;
-Nage_marks =  -(N-X);
+    Posi_marks = 3 * X;
+    Nage_marks = -(N - X);
 
-Total_marks= Posi_marks  + Nage_marks;
+    Total_marks = Posi_marks + Nage_marks;
 
-if(Total_marks >= P){
-    cout<<"PASS"<<endl;
-}else{
-    cout<<"FAIL"<<endl;
-}
-
-
-
+    if (Total_marks >= P)
+    {
+        cout << "PASS" << endl;
+    }
+    else
+    {
+        cout << "FAIL" << endl;
+    }
 }
 
 int main()

@@ -144,6 +144,7 @@ void solve()
     // char arr[30];
     //Taking input without space sapareted
     //   cin.getline(arr,30);
+
     string arr;
     cin >> arr;
     // debug(arr);
@@ -161,7 +162,7 @@ void solve()
             streak = 0;
         }
     }
-    bonus = max(bonus,streak);
+    bonus = max(bonus, streak);
     total_salary = curr_base + (bonus * Y);
     cout << total_salary << endl;
 }
