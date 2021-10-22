@@ -131,18 +131,23 @@ int rng(int lim)
     return uid(rang);
 }
 const int mod = 1'000'000'007;
-bool isPrime(int n)
+
+const int N = 1e6 + 10;
+vector<bool> isPrime(N, 1);  //for prime it is true or 1
+
+void seive(int n)
 {
-    // Corner case
-    if (n <= 1)
-        return false;
-
-    // Check from 2 to square root of n
-    for (int i = 2; i <= sqrt(n); i++)
-        if (n % i == 0)
-            return false;
-
-    return true;
+    isPrime[0] = isPrime[1] = false;
+    for (int i = 2; i < n; i++)
+    { //i * i <n
+        if (isPrime[i] == true)
+        {
+            for (int j = 2 * i; j < N; j = j + i)
+            {
+                isPrime[j] = false;
+            }
+        }
+    }
 }
 
 void solve()
@@ -152,10 +157,11 @@ void solve()
     ll X, Y, count = 0;
     cin >> X >> Y;
     ll i = X;
+    seive(N);
     while (i < Y)
     {
         // debug(i);
-        if (isPrime(i+2)==true)
+        if (isPrime[i+2]==true)
         {
             count = count + 1;
             i = i + 2;
