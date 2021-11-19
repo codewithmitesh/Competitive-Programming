@@ -1,2 +1,3 @@
- Time for Testcase 1 is :3.35487 seconds.
- Time for Testcase 0 is :2.76138 seconds.
+ Time for Testcase 2 is :4.62955 seconds.
+ Time for Testcase 1 is :4.90259 seconds.
+ Time for Testcase 0 is :2.65048 seconds.
