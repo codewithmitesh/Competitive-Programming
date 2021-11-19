@@ -132,48 +132,22 @@ int rng(int lim)
 }
 const int mod = 1'000'000'007;
 
-const int N = 1e6 + 10;
-vector<bool> isPrime(N, 1); //for prime it is true or 1
-
-void seive(int n)
-{
-    isPrime[0] = isPrime[1] = false;
-    for (int i = 2; i < n; i++)
-    { //i * i <n
-        if (isPrime[i] == true)
-        {
-            for (int j = 2 * i; j < N; j = j + i)
-            {
-                isPrime[j] = false;
-            }
-        }
-    }
-}
-
 void solve()
 { //Snippets Variables
-    int j, n, m;
+    int i, j, n, m;
     //Code Variables
-    ll X, Y, count = 0;
-    cin >> X >> Y;
-    ll i = X;
-    seive(N);
-    while (i < Y)
+
+    int X, Y, Z;
+    cin >> X >> Y >> Z;
+
+    if (X + Y <= Z)
     {
-        // debug(i);
-        if (isPrime[i + 2] == true)
-        {
-            count = count + 1;
-            i = i + 2;
-        }
-        else
-        {
-            count = count + 1;
-            i++;
-        }
-        debug(i);
+        cout << "YES" << endl;
     }
-    cout << count << endl;
+    else
+    {
+        cout << "NO" << endl;
+    }
 }
 
 int main()
