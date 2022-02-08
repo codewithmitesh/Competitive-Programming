@@ -136,24 +136,34 @@ void solve()
 { // Snippets Variables
     int i, j, n, m;
     // Code Variables
+    int A, B, C, P, Q, R;
+    cin >> A >> B >> C >> P >> Q >> R;
+    int toWin = (P + Q + R) / 2, newScore = 0;
 
-    int x, y;
-    cin >> x >> y;
-
-    if (y == 0)
+    if ((A + B + C) > toWin)
     {
-        cout << x << "\n";
-    }
-    else if (x == y)
-    {
-        cout << x * 2 - 1 << "\n";
+        cout << "YES"
+             << "\n";
     }
     else
     {
-        int normal = x-y,ans = 0;
-        ans = normal + 2*(y-1) + 2;
-        cout<<ans<<"\n";
-        
+        int temp = max(P, max(Q, R));
+        if (temp == P)
+            newScore = B + C;
+        else if (temp == Q)
+            newScore = A + C;
+        else
+            newScore = A + B;
+
+        int ans = temp + newScore;
+        debug(ans);
+        debug(toWin);
+        if (ans > toWin)
+            cout << "YES"
+                 << "\n";
+        else
+            cout << "NO"
+                 << "\n";
     }
 }
 
