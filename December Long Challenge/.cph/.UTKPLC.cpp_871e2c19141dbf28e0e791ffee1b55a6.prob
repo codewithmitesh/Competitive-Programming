@@ -1,0 +1,1 @@
+{"name":"Local: UTKPLC","url":"c:\\Workspace\\Competitive Programming\\December Long Challenge\\UTKPLC.cpp","tests":[{"id":1638524122328,"input":"2\nA B C\nA B\nB C A\nA C\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Workspace\\Competitive Programming\\December Long Challenge\\UTKPLC.cpp","group":"local","local":true}

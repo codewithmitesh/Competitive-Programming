@@ -1,0 +1,1 @@
+{"name":"Local: MinMaxSwap","url":"c:\\Workspace\\Competitive Programming\\Codeforces 768\\MinMaxSwap.cpp","tests":[{"id":1643296344704,"input":"1\n2\n1 2\n2 1","output":"18\n9\n2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Workspace\\Competitive Programming\\Codeforces 768\\MinMaxSwap.cpp","group":"local","local":true}

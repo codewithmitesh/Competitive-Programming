@@ -1,0 +1,9 @@
+justMaxB 5
+a[justMaxB] 5
+justMaxB 1
+a[justMaxB] 4
+justMaxB 0
+a[justMaxB] 3
+justMaxB 2
+nowMaxA 2
+nowMaxB 2

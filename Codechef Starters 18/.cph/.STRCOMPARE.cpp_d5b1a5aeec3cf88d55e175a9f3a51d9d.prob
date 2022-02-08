@@ -1,0 +1,1 @@
+{"name":"Local: STRCOMPARE","url":"c:\\Workspace\\Competitive Programming\\Codechef Starters 18\\STRCOMPARE.cpp","tests":[{"id":1637593254730,"input":"2\n2\nab\nbb\n3\naaa\naab","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Workspace\\Competitive Programming\\Codechef Starters 18\\STRCOMPARE.cpp","group":"local","local":true}

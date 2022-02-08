@@ -1,0 +1,7 @@
+{
+    "files.exclude": {
+        "**/*.exe": true,
+        "**/*.bin": true,
+    },
+    "editor.smoothScrolling": true,
+}
