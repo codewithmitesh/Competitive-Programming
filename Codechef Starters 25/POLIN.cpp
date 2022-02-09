@@ -136,34 +136,25 @@ void solve()
 { // Snippets Variables
     int i, j, n, m;
     // Code Variables
-    int A, B, C, P, Q, R;
-    cin >> A >> B >> C >> P >> Q >> R;
-    int toWin = (P + Q + R) / 2, newScore = 0;
-
-    if ((A + B + C) > toWin)
+    int N;
+    cin >> N;
+    int mat[N][2];
+    for (int i = 0; i < N; i++)
     {
-        cout << "YES"
-             << "\n";
+        cin >> mat[i][0] >> mat[i][1];
     }
-    else
+    unordered_set<int> uns1;
+    for (int i = 0; i < N; i++)
     {
-        int temp = max(P, max(Q, R));
-        if (temp == P)
-            A = P;
-        else if (temp == Q)
-            B = Q;
-        else if(temp = R)
-            C = R;
-
-        // debug(ans);
-        debug(toWin);
-        if ((A+B+C) > toWin)
-            cout << "YES"
-                 << "\n";
-        else
-            cout << "NO"
-                 << "\n";
+        uns1.insert(mat[i][0]);
     }
+
+    unordered_set<int> uns2;
+    for (int i = 0; i < N; i++)
+    {
+        uns2.insert(mat[i][1]);
+    }
+    cout << uns1.size() + uns2.size() << "\n";
 }
 
 int main()

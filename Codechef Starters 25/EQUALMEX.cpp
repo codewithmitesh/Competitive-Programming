@@ -136,33 +136,95 @@ void solve()
 { // Snippets Variables
     int i, j, n, m;
     // Code Variables
-    int A, B, C, P, Q, R;
-    cin >> A >> B >> C >> P >> Q >> R;
-    int toWin = (P + Q + R) / 2, newScore = 0;
+    int N;
+    cin >> N;
+    int arr[2 * N];
+    for (int i = 0; i < 2 * N; i++)
+    {
+        cin >> arr[i];
+    }
+    unordered_map<int, int> map1;
+    unordered_map<int, int> map2;
+    for (int i = 0; i < N; i++)
+    {
+        if (map1.find(arr[i]) == map1.end())
+        {
+            map1[arr[i]] = 1;
+        }
+        else
+        {
+            map1[arr[i]]++;
+        }
+    }
+    for (int i = N; i < 2 * N; i++)
+    {
+        if (map2.find(arr[i]) == map2.end())
+        {
+            map2[arr[i]] = 1;
+        }
+        else
+        {
 
-    if ((A + B + C) > toWin)
+            map2[arr[i]]++;
+        }
+    }
+    // for (auto i : map1)
+    // {
+    //     cout << i.first << "->" << i.second << "\n";
+    // }
+    // for (auto i : map2)
+    // {
+    //     cout << i.first << " " << i.second << "\n";
+    // }
+    int MEX1 = 0, MEX2 = 0;
+    for (int i = 0; i < 100000; i++)
+    {
+        if (map1.find(i) == map1.end())
+        {
+            MEX1 = i;
+            break;
+        }
+    }
+    for (int i = 0; i < 100000; i++)
+    {
+        if (map2.find(i) == map2.end())
+        {
+            MEX2 = i;
+            break;
+        }
+    }
+    debug(MEX1);
+    debug(MEX2);
+
+    if (MEX1 == MEX2)
     {
         cout << "YES"
              << "\n";
+        return;
     }
     else
     {
-        int temp = max(P, max(Q, R));
-        if (temp == P)
-            A = P;
-        else if (temp == Q)
-            B = Q;
-        else if(temp = R)
-            C = R;
 
-        // debug(ans);
-        debug(toWin);
-        if ((A+B+C) > toWin)
-            cout << "YES"
-                 << "\n";
-        else
-            cout << "NO"
-                 << "\n";
+        for (auto it = map1.begin(); it != map1.end(); it++)
+        {
+            if (it->second < 2)
+            {
+                cout << "NO"
+                     << "\n";
+                return;
+            }
+        }
+        for (auto it = map2.begin(); it != map2.end(); it++)
+        {
+            if (it->second < 2)
+            {
+                cout << "NO"
+                     << "\n";
+                return;
+            }
+        }
+        cout << "YES"
+             << "\n";
     }
 }
 
