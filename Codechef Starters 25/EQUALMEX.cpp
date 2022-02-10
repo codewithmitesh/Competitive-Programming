@@ -138,93 +138,31 @@ void solve()
     // Code Variables
     int N;
     cin >> N;
-    int arr[2 * N];
+    vi arr;
+    map<int, int> mp;
     for (int i = 0; i < 2 * N; i++)
     {
-        cin >> arr[i];
+        int temp;
+        cin >> temp;
+        arr.push_back(temp);
+        mp[temp]++;
     }
-    unordered_map<int, int> map1;
-    unordered_map<int, int> map2;
-    for (int i = 0; i < N; i++)
-    {
-        if (map1.find(arr[i]) == map1.end())
-        {
-            map1[arr[i]] = 1;
-        }
-        else
-        {
-            map1[arr[i]]++;
-        }
-    }
-    for (int i = N; i < 2 * N; i++)
-    {
-        if (map2.find(arr[i]) == map2.end())
-        {
-            map2[arr[i]] = 1;
-        }
-        else
-        {
 
-            map2[arr[i]]++;
-        }
-    }
-    // for (auto i : map1)
-    // {
-    //     cout << i.first << "->" << i.second << "\n";
-    // }
-    // for (auto i : map2)
-    // {
-    //     cout << i.first << " " << i.second << "\n";
-    // }
-    int MEX1 = 0, MEX2 = 0;
-    for (int i = 0; i < 100000; i++)
+    bool poss = true;
+    for (int i = 0; i <= N; i++)
     {
-        if (map1.find(i) == map1.end())
+        if (mp[i] == 0)
         {
-            MEX1 = i;
-            break;
+            cout << "YES"
+                 << "\n";
+                 return;
         }
-    }
-    for (int i = 0; i < 100000; i++)
-    {
-        if (map2.find(i) == map2.end())
+        else if (mp[i] == 1)
         {
-            MEX2 = i;
-            break;
+            cout << "NO"
+                 << "\n";
+                 return;
         }
-    }
-    debug(MEX1);
-    debug(MEX2);
-
-    if (MEX1 == MEX2)
-    {
-        cout << "YES"
-             << "\n";
-        return;
-    }
-    else
-    {
-
-        for (auto it = map1.begin(); it != map1.end(); it++)
-        {
-            if (it->second < 2)
-            {
-                cout << "NO"
-                     << "\n";
-                return;
-            }
-        }
-        for (auto it = map2.begin(); it != map2.end(); it++)
-        {
-            if (it->second < 2)
-            {
-                cout << "NO"
-                     << "\n";
-                return;
-            }
-        }
-        cout << "YES"
-             << "\n";
     }
 }
 
