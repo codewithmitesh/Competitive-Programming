@@ -132,38 +132,56 @@ int rng(int lim)
 }
 const int mod = 1'000'000'007;
 
+void rvereseArray(int arr[], int start, int end)
+{
+    while (start < end)
+    {
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+        start++;
+        end--;
+    }
+}
+
 void solve()
 { // Snippets Variables
-    int i, j, n, m;
+    int i, j, n, m, FirstIndex, secondIndex;
     // Code Variables
-    int N;
-    cin >> N;
-    vi arr;
-    map<int, int> mp;
-    for (int i = 0; i < 2 * N; i++)
+    cin >> n;
+    int arr[n + 1];
+    for (int i = 0; i < n; i++)
     {
-        int temp;
-        cin >> temp;
-        arr.push_back(temp);
-        mp[temp]++;
+        cin >> arr[i];
     }
 
-    bool poss = true;
-    for (int i = 0; i <= N; i++)
+    for (int i = 0; i < n; i++)
     {
-        if (mp[i] == 0)
+        if (arr[i] == i + 1)
         {
-            cout << "YES"
-                 << "\n";
-            return;
+            continue;
         }
-        else if (mp[i] == 1)
+        else
         {
-            cout << "NO"
-                 << "\n";
-            return;
+            int firstptr = i, secondIndex;
+            for (int j = i; j <= n; j++)
+            {
+                if (arr[j] == i + 1)
+                {
+                    secondIndex = j;
+                    break;
+                }
+            }
+            rvereseArray(arr, firstptr, secondIndex);
+            break;
         }
     }
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout << "\n";
 }
 
 int main()
