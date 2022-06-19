@@ -1,0 +1,10 @@
+take array ma always o thij thay chhe indexing the
+when array or vector created by default 0 hoy chhe 
+To take input from 1 to n :-
+for (int i = 1; i <= n; i++)
+        cin >> a[i];
+Sort array:-
+sort(arr+1,arr+n+1); //index 1 to n sort karse.
+--> Take Input of vector size(n)
+for (auto& x : p) cin >> x;
+

@@ -4,4 +4,8 @@
         "**/*.bin": true,
     },
     "editor.smoothScrolling": true,
+    "files.associations": {
+        "*.java": "java",
+        "iostream": "cpp"
+    },
 }
